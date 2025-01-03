@@ -1,10 +1,15 @@
 const Botgram = require('botgram');
 const figlet = require('figlet');
 
-const { TELEGRAM_BOT_TOKEN } = "7734993043:AAGt1_kNaJrqCnH-OOWyZOtmwq-_38QkCBk";
+const { TELEGRAM_BOT_TOKEN } = process.env;
+
+if (!TELEGRAM_BOT_TOKEN) {
+  console.error('Seems like you forgot to pass Telegram Bot Token. I can not proceed...');
+  process.exit(1);
+}
 
 
-const bot = new Botgram("7734993043:AAGt1_kNaJrqCnH-OOWyZOtmwq-_38QkCBk");
+const bot = new Botgram(TELEGRAM_BOT_TOKEN);
 
 function onMessage(msg, reply) {
   figlet(msg.text, (err, data) => {
