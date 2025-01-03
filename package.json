@@ -1,0 +1,23 @@
+{
+  "name": "phonemanager",
+  "version": "1.0.0",
+  "description": "Oppo phone manager",
+  "main": "index.js",
+  "scripts": {
+    "test": "node index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/clintonnj/PhoneManager.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/clintonnj/PhoneManager/issues"
+  },
+  "homepage": "https://github.com/clintonnj/PhoneManager#readme",
+  "dependencies": {
+    "botgram": "^2.2.0",
+    "figlet": "^1.8.0"
+  }
+}
